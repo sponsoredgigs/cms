@@ -98,7 +98,6 @@ Schema migration and plugins installation can only be done on the development se
 ### Environment Variables
 | Variable | Description |
 | :--- | :--- |
-| `ENVIRONMENT` | The running environment: prod, dev |
 | `PAYLOAD_PUBLIC_SERVER_URL` | The CMS url. Used as the main route for the APIs. |
 | `MONGODB_URI` | MongoDB connection string |
 | `PAYLOAD_SECRET` | Secret token for security |

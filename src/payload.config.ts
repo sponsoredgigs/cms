@@ -12,7 +12,7 @@ import Jobs from "./collections/Jobs";
 
 export default buildConfig({
   serverURL:
-    process.env.ENVIRONMENT === "prod"
+    process.env.NODE_ENV === "production"
       ? process.env.PAYLOAD_PUBLIC_SERVER_URL
       : "http://localhost:3000",
   admin: {
