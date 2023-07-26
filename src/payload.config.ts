@@ -18,6 +18,7 @@ export default buildConfig({
   admin: {
     user: Users.slug,
   },
+  cors: "*",
   collections: [Attachments, Avatars, Jobs, Posts, PostBanners, Users],
   plugins: [
     s3Upload(
