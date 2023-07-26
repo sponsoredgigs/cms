@@ -6,7 +6,7 @@ WORKDIR /home/node/app
 COPY package*.json ./
 
 COPY . .
-RUN yarn install
+RUN yarn config set network-timeout 600000 -g && yarn install
 RUN yarn build
 
 FROM base as runtime
@@ -17,7 +17,7 @@ ENV PAYLOAD_CONFIG_PATH=dist/payload.config.js
 WORKDIR /home/node/app
 COPY package*.json  ./
 
-RUN yarn install --production
+RUN yarn config set network-timeout 600000 -g && yarn install --production
 COPY --from=builder /home/node/app/dist ./dist
 COPY --from=builder /home/node/app/build ./build
 
