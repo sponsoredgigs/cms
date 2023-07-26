@@ -55,7 +55,7 @@ Below are the schemas for the `Job`, `Post`, and `User` collections:
 | :--- | :---: | :--- |
 | `title` | Yes | Post title |
 | `content` | Yes | Post content |
-| `media` | No | Post illustration |
+| `banner` | No | Post illustration |
 | `slug` | Yes | URL path to the post |
 | `minutesToRead` | Yes | Estimated read time (in minutes) |
 | `author` | Yes | Post author (linked to `User` entity) |
